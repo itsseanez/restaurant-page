@@ -59,6 +59,7 @@ img {
 
 .page-clicked {
     background-color: var(--secondary-color);
+    cursor: default;
 }
 
 #statistics {

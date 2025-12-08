@@ -1,7 +1,12 @@
 import "./styles.css";
 import about from "./about.js";
+import contact from "./contact.js";
+import menu from "./menu.js";
 
 const content = document.getElementById("content");
+const defaultPageButton = document.getElementById("default-page");
+defaultPageButton.classList.add("page-clicked");
+content.appendChild(about.page);
 
 const navButtons = document.querySelectorAll(".nav-button");
 navButtons.forEach((button) => {
@@ -23,8 +28,9 @@ navButtons.forEach((button) => {
                     btn.classList.remove("page-clicked");
                 }
             });
-            content.innerHTML = "<h1>Contact Page Coming Soon!</h1>";
-            
+            content.innerHTML = "";
+            content.appendChild(contact.page);
+
         } else if (button.textContent === "Menu") {
             button.classList.add("page-clicked");
             navButtons.forEach((btn) => {
@@ -32,7 +38,8 @@ navButtons.forEach((button) => {
                     btn.classList.remove("page-clicked");
                 }
             });
-            content.innerHTML = "<h1>Menu Page Coming Soon!</h1>";
+            content.innerHTML = "";
+            content.appendChild(menu.page);
         }
     });
 });
