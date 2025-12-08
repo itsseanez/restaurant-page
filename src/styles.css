@@ -57,6 +57,10 @@ img {
     text-align: left;
 }
 
+.page-clicked {
+    background-color: var(--secondary-color);
+}
+
 #statistics {
     display: flex;
     justify-content: center;
